@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+             x:Class="TestProject.Views.AddNote">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <Image x:Name="Slide" Source="piper.jpg" HeightRequest="300" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill"/>
+                <StackLayout x:Name="Camera_View" HeightRequest="300" BackgroundColor="LightGray" Orientation="Vertical" IsVisible="False">
+                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+                        <Button Text="Yeni Fotoğraf Çek" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0" Clicked="PhotoButton_Clicked"/>
+                        <Button Text="Dosyadan Yükle" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0" Clicked="PhotoFromGallery_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                                                  NumberOfTapsRequired="1" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                    </StackLayout>
+                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Padding="10" Orientation="Vertical">
+                    <Label Text="Title"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="StartAndExpand" />
+                    <Entry x:Name="Title" 
+                               Text="" />
+                    <Label Text="Detail"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="StartAndExpand" />
+                    <Editor x:Name="Detail"
+                                Text="" 
+                                VerticalOptions="FillAndExpand"
+                                HeightRequest="100" />
+                    <Button Text="Save" 
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="FillAndExpand" 
+                            Clicked="SaveBtn_Clicked" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

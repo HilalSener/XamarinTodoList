@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TestProject"
+             xmlns:pages="clr-namespace:TestProject.Views"
+             x:Class="TestProject.MainPage"
+             Title="Home">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem x:Name="Timer" Priority="0" Text="00:00:00" Order="Primary" />
+        <ToolbarItem x:Name="Status0" Priority="1" Order="Primary" Icon="red_circle.png" />
+        <ToolbarItem x:Name="Status1" Priority="2" Order="Primary" Icon="green_circle.png" />
+    </TabbedPage.ToolbarItems> 
+    <TabbedPage.Children>
+
+        <pages:AddNote Title="Add"/>
+        <pages:Notes Title="Notes"/>
+
+    </TabbedPage.Children>
+</TabbedPage>
