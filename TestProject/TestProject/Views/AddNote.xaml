@@ -7,29 +7,121 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                <Image x:Name="Slide" Source="piper.jpg" HeightRequest="300" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Aspect="AspectFill"/>
-                <StackLayout x:Name="Camera_View" HeightRequest="300" BackgroundColor="LightGray" Orientation="Vertical" IsVisible="False">
-                    <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
-                        <Button Text="Yeni Fotoğraf Çek" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0" Clicked="PhotoButton_Clicked"/>
-                        <Button Text="Dosyadan Yükle" VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0" Clicked="PhotoFromGallery_Clicked" />
+                <Image x:Name="Slide" 
+                       Source="piper.jpg" 
+                       HeightRequest="300" 
+                       VerticalOptions="FillAndExpand"
+                       HorizontalOptions="FillAndExpand"
+                       Aspect="AspectFill"/>
+                <Image x:Name="PhotoImage" 
+                       HeightRequest="300" 
+                       VerticalOptions="FillAndExpand" 
+                       HorizontalOptions="FillAndExpand" 
+                       Aspect="AspectFill"
+                       IsVisible="False" />
+                <StackLayout x:Name="Camera_View"
+                             HeightRequest="300" 
+                             BackgroundColor="LightGray"
+                             Orientation="Vertical"
+                             IsVisible="False">
+                    <StackLayout Orientation="Vertical"
+                                 VerticalOptions="EndAndExpand">
+                        <Button x:Name="CameraButton"
+                                Text="Yeni Fotoğraf Çek" 
+                                VerticalOptions="EndAndExpand" 
+                                HorizontalOptions="FillAndExpand"
+                                Margin="20, 0, 20, 0" />
+                        <Button Text="Dosyadan Yükle"
+                                VerticalOptions="EndAndExpand"
+                                HorizontalOptions="FillAndExpand" 
+                                Margin="20, 0, 20, 0" 
+                                Clicked="PhotoFromGallery_Clicked" />
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
+                <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="CenterAndExpand" 
+                             VerticalOptions="CenterAndExpand">
+                    <StackLayout x:Name="AddPhotoStack1"
+                                 BackgroundColor="LightGray"
+                                 HeightRequest="100" 
+                                 WidthRequest="100">
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer Tapped="Add_Photo_Tapped"
                                                   NumberOfTapsRequired="1" />
                         </StackLayout.GestureRecognizers>
-                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                        <Image Source="camera.png" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                               Margin="30"/>
                     </StackLayout>
-                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                    <StackLayout x:Name="PhotoStack1"
+                                 IsVisible="False">
+                        <AbsoluteLayout>
+                            <Image x:Name="Photo1" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                            <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
+                                <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
+                                <AbsoluteLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                                          NumberOfTapsRequired="1" />
+                                </AbsoluteLayout.GestureRecognizers>
+                            </AbsoluteLayout>
+                        </AbsoluteLayout>
                     </StackLayout>
-                    <StackLayout BackgroundColor="LightGray" HeightRequest="100" WidthRequest="100">
-                        <Image Source="camera.png" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Margin="30"/>
+                    <StackLayout x:Name="AddPhotoStack2"
+                                 BackgroundColor="LightGray" 
+                                 HeightRequest="100"
+                                 WidthRequest="100">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                                                  NumberOfTapsRequired="1" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="camera.png" 
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                               Margin="30"/>
+                    </StackLayout>
+                    <StackLayout x:Name="PhotoStack2"
+                                 IsVisible="False">
+                        <AbsoluteLayout>
+                            <Image x:Name="Photo2" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                            <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
+                                <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
+                                <AbsoluteLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                                          NumberOfTapsRequired="1" />
+                                </AbsoluteLayout.GestureRecognizers>
+                            </AbsoluteLayout>
+                        </AbsoluteLayout>
+                    </StackLayout>
+                    <StackLayout x:Name="AddPhotoStack3"
+                                 BackgroundColor="LightGray" 
+                                 HeightRequest="100"
+                                 WidthRequest="100">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                                                  NumberOfTapsRequired="1" />
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="camera.png"
+                               VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand" 
+                               Margin="30"/>
+                    </StackLayout>
+                    <StackLayout x:Name="PhotoStack3"
+                             IsVisible="False">
+                        <AbsoluteLayout>
+                            <Image x:Name="Photo3" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                            <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
+                                <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
+                                <AbsoluteLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                                          NumberOfTapsRequired="1" />
+                                </AbsoluteLayout.GestureRecognizers>
+                            </AbsoluteLayout>
+                        </AbsoluteLayout>
                     </StackLayout>
                 </StackLayout>
-                <StackLayout Padding="10" Orientation="Vertical">
+                <StackLayout Padding="10" 
+                             Orientation="Vertical">
                     <Label Text="Title"
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="StartAndExpand" />
