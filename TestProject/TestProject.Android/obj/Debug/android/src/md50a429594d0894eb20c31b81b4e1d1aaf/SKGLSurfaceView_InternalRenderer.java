@@ -15,7 +15,7 @@ public class SKGLSurfaceView_InternalRenderer
 	}
 
 
-	public SKGLSurfaceView_InternalRenderer ()
+	public SKGLSurfaceView_InternalRenderer () throws java.lang.Throwable
 	{
 		super ();
 		if (getClass () == SKGLSurfaceView_InternalRenderer.class)

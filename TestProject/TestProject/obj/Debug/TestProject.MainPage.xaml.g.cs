@@ -11,8 +11,7 @@
 namespace TestProject {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\hilal.sener\\source\\repos\\TestProject\\TestProject\\TestProject\\MainPage.xa" +
-        "ml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Github\\XamarinTodoList\\TestProject\\TestProject\\MainPage.xaml")]
     public partial class MainPage : global::Xamarin.Forms.TabbedPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

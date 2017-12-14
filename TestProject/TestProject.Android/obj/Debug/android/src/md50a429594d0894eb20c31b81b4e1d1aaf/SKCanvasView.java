@@ -17,7 +17,7 @@ public class SKCanvasView
 	}
 
 
-	public SKCanvasView (android.content.Context p0)
+	public SKCanvasView (android.content.Context p0) throws java.lang.Throwable
 	{
 		super (p0);
 		if (getClass () == SKCanvasView.class)
@@ -25,7 +25,7 @@ public class SKCanvasView
 	}
 
 
-	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1)
+	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1) throws java.lang.Throwable
 	{
 		super (p0, p1);
 		if (getClass () == SKCanvasView.class)
@@ -33,7 +33,7 @@ public class SKCanvasView
 	}
 
 
-	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1, int p2)
+	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1, int p2) throws java.lang.Throwable
 	{
 		super (p0, p1, p2);
 		if (getClass () == SKCanvasView.class)
@@ -41,7 +41,7 @@ public class SKCanvasView
 	}
 
 
-	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3)
+	public SKCanvasView (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3) throws java.lang.Throwable
 	{
 		super (p0, p1, p2, p3);
 		if (getClass () == SKCanvasView.class)

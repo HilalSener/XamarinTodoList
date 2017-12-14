@@ -41,6 +41,7 @@
     <Compile Include="DAL\ItemsDb.cs" />
     <Compile Include="Dto\MediaDto.cs" />
     <Compile Include="Interfaces\IImageService.cs" />
+    <Compile Include="Models\Photo.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Helpers\StorageHelper.cs" />
     <Compile Include="Interfaces\IFileHelper.cs" />
@@ -73,6 +74,12 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.10.0.3\lib\portable-net45+win8+wp8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\PCLStorage.1.0.2\lib\portable-net45+wp8+wpa81+win8+monoandroid+monotouch+Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Plugin.Connectivity, Version=2.4.0.70, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xam.Plugin.Connectivity.2.4.0.70-beta\lib\portable-net45+wp80+win8+wpa81\Plugin.Connectivity.dll</HintPath>

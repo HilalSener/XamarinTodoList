@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Paths>
-  <Jars>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\FormsViewGroup\library_project_imports\formsviewgroup.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Animated.Vector.Drawable\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Annotations\library_project_imports\support-annotations.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Compat\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.UI\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Core.Utils\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Design\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Fragment\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Media.Compat\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Transition\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.AppCompat\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.CardView\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.MediaRouter\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.Palette\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\bin\classes.jar;C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.Vector.Drawable\library_project_imports\bin\classes.jar</Jars>
+  <Jars></Jars>
   <ResolvedResourceDirectories>
+    <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\PCLStorage\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.Media\library_project_imports\res</ResolvedResourceDirectory>
@@ -21,8 +22,10 @@
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\res</ResolvedResourceDirectory>
     <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\res</ResolvedResourceDirectory>
+    <ResolvedResourceDirectory>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\PCLStorage\library_project_imports\res</ResolvedResourceDirectory>
   </ResolvedResourceDirectories>
   <ResolvedAssetDirectories>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\PCLStorage\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Connectivity\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.CurrentActivity\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Plugin.Media\library_project_imports\assets</ResolvedAssetDirectory>
@@ -36,9 +39,11 @@
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Android.Support.v4\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android\library_project_imports\assets</ResolvedAssetDirectory>
     <ResolvedAssetDirectory>obj\Debug\__library_projects__\Xamarin.Forms.Platform\library_project_imports\assets</ResolvedAssetDirectory>
+    <ResolvedAssetDirectory>obj\Debug\__library_projects__\PCLStorage\library_project_imports\assets</ResolvedAssetDirectory>
   </ResolvedAssetDirectories>
   <ResolvedEnvironmentFiles />
   <ResolvedResourceDirectoryStamps>
+    <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\PCLStorage.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.Connectivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.CurrentActivity.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Plugin.Media.stamp</ResolvedResourceDirectoryStamp>
@@ -58,5 +63,6 @@
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Android.Support.v7.RecyclerView.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.Android.stamp</ResolvedResourceDirectoryStamp>
     <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\Xamarin.Forms.Platform.stamp</ResolvedResourceDirectoryStamp>
+    <ResolvedResourceDirectoryStamp>C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\__library_projects__\PCLStorage.stamp</ResolvedResourceDirectoryStamp>
   </ResolvedResourceDirectoryStamps>
 </Paths>

@@ -2,6 +2,7 @@
   "dependencies": {
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
     "Newtonsoft.Json": "10.0.3",
+    "PCLStorage": "1.0.2",
     "SkiaSharp.Views.Forms": "1.59.2",
     "sqlite-net-pcl": "1.4.118",
     "SQLitePCL": "3.8.7.2",

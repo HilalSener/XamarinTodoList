@@ -17,10 +17,9 @@ namespace TestProject.DAL
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime ArticleDate { get; set; }
-        
-        //public Byte DocumentTypeId { get; set; }
         public String DocumentName { get; set; }
         public string DocumentPath { get; set; }
+        public String Document { get; set; }
 
         //public Media media { get; set; }
 

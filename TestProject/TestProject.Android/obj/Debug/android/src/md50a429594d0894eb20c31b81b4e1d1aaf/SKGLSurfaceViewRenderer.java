@@ -19,7 +19,7 @@ public abstract class SKGLSurfaceViewRenderer
 	}
 
 
-	public SKGLSurfaceViewRenderer ()
+	public SKGLSurfaceViewRenderer () throws java.lang.Throwable
 	{
 		super ();
 		if (getClass () == SKGLSurfaceViewRenderer.class)

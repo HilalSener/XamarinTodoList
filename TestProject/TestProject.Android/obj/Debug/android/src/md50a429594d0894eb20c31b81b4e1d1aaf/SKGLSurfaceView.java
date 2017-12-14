@@ -15,7 +15,7 @@ public class SKGLSurfaceView
 	}
 
 
-	public SKGLSurfaceView (android.content.Context p0)
+	public SKGLSurfaceView (android.content.Context p0) throws java.lang.Throwable
 	{
 		super (p0);
 		if (getClass () == SKGLSurfaceView.class)
@@ -23,7 +23,7 @@ public class SKGLSurfaceView
 	}
 
 
-	public SKGLSurfaceView (android.content.Context p0, android.util.AttributeSet p1)
+	public SKGLSurfaceView (android.content.Context p0, android.util.AttributeSet p1) throws java.lang.Throwable
 	{
 		super (p0, p1);
 		if (getClass () == SKGLSurfaceView.class)

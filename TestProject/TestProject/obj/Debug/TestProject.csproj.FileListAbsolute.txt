@@ -63,7 +63,6 @@ C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Windows.Foundation.F
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Core.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Platform.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Xaml.dll
-C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Mono.Android.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Mono.Android.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Newtonsoft.Json.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Plugin.Connectivity.pdb
@@ -83,10 +82,15 @@ C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Platfo
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Xaml.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
-C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.csproj.CoreCompileInputs.cache
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.MainPage.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.App.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.AddNote.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.Notes.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.pdb
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.Abstractions.dll
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.dll
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.xml
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.Abstractions.xml
+C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll.mdb
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\TestProject.dll.mdb

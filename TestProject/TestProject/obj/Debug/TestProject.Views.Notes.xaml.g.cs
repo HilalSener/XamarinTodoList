@@ -11,8 +11,7 @@
 namespace TestProject.Views {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Users\\hilal.sener\\source\\repos\\TestProject\\TestProject\\TestProject\\Views\\Notes" +
-        ".xaml")]
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("C:\\Github\\XamarinTodoList\\TestProject\\TestProject\\Views\\Notes.xaml")]
     public partial class Notes : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")]

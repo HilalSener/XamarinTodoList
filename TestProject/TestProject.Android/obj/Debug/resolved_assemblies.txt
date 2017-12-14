@@ -1,6 +1,8 @@
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\TestProject.Android.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\FormsViewGroup.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Newtonsoft.Json.dll
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\PCLStorage.Abstractions.dll
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\PCLStorage.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.Connectivity.Abstractions.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.Connectivity.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.CurrentActivity.dll
@@ -84,4 +86,4 @@ C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\asse
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\System.Diagnostics.Tools.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\System.ComponentModel.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Mono.Security.dll
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Mono.CSharp.dll

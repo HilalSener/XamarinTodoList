@@ -19,7 +19,7 @@ public class SKSurfaceView
 	}
 
 
-	public SKSurfaceView (android.content.Context p0)
+	public SKSurfaceView (android.content.Context p0) throws java.lang.Throwable
 	{
 		super (p0);
 		if (getClass () == SKSurfaceView.class)
@@ -27,7 +27,7 @@ public class SKSurfaceView
 	}
 
 
-	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1)
+	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1) throws java.lang.Throwable
 	{
 		super (p0, p1);
 		if (getClass () == SKSurfaceView.class)
@@ -35,7 +35,7 @@ public class SKSurfaceView
 	}
 
 
-	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1, int p2)
+	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1, int p2) throws java.lang.Throwable
 	{
 		super (p0, p1, p2);
 		if (getClass () == SKSurfaceView.class)
@@ -43,7 +43,7 @@ public class SKSurfaceView
 	}
 
 
-	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3)
+	public SKSurfaceView (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3) throws java.lang.Throwable
 	{
 		super (p0, p1, p2, p3);
 		if (getClass () == SKSurfaceView.class)
