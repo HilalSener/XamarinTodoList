@@ -20,7 +20,16 @@ namespace TestProject.DAL
         public String DocumentName { get; set; }
         public string DocumentPath { get; set; }
         public String Document { get; set; }
+        public Photo photo1 { get; set; }
+        public Photo photo2 { get; set; }
+        public Photo photo3 { get; set; }
 
+        public class Photo
+        {
+            public String DocumentName { get; set; }
+            public string DocumentPath { get; set; }
+            public String Document { get; set; }
+        }
         //public Media media { get; set; }
 
         //public class Media

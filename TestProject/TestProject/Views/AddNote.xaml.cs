@@ -21,9 +21,12 @@ namespace TestProject.Views
     public partial class AddNote : ContentPage
     {
         MediaFile photo = null;
-
-        //public List<Photo> Photos = new List<Photo>();
+        public Photo photo1 { get; set; }
+        public Photo photo2 { get; set; }
+        public Photo photo3 { get; set; }
         
+        //public List<Photo> Photos = new List<Photo>();
+
         string photoName = DateTime.Now.Date.ToString("ddMMyyyymmhhMMss") + Guid.NewGuid().ToString().Replace("-", "").Substring(0, 4) + ".jpg";
 
         public AddNote()
@@ -52,6 +55,8 @@ namespace TestProject.Views
                 DefaultCamera = CameraDevice.Rear
             });
 
+            
+
             if (photo != null)
             {
                 //var imageService = DependencyService.Get<IImageService>();
@@ -63,6 +68,9 @@ namespace TestProject.Views
                 {
                     AddPhotoStack1.IsVisible = false;
                     PhotoStack1.IsVisible = true;
+                    photo1.DocumentName = photoName;
+                    photo1.DocumentPath = photo.Path;
+                    photo1.Document = await DocumentEvent(photo1);
                     Photo1.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
@@ -70,6 +78,8 @@ namespace TestProject.Views
                 {
                     AddPhotoStack2.IsVisible = false;
                     PhotoStack2.IsVisible = true;
+                    photo2.DocumentName = photoName;
+                    photo2.DocumentPath = photo.Path;
                     Photo2.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
@@ -77,10 +87,13 @@ namespace TestProject.Views
                 {
                     AddPhotoStack3.IsVisible = false;
                     PhotoStack3.IsVisible = true;
+                    photo3.DocumentName = photoName;
+                    photo3.DocumentPath = photo.Path;
                     Photo3.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
             }
+            //photo.Dispose();
                 
         }
 
@@ -123,25 +136,33 @@ namespace TestProject.Views
 
         //}
 
-        private void SaveBtn_Clicked(object sender, EventArgs e)
+        public async Task<String> DocumentEvent(Photo photo)
+        {
+            var imageService = DependencyService.Get<IImageService>();
+            var media = await photo.DocumentPath.FileToByteArray();
+            var result = imageService.ResizeImage(media, 1200, 768);
+            return photo.Document = Convert.ToBase64String(result);
+        }
+
+        private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (!CrossConnectivity.Current.IsConnected)
             {
-                DisplayAlert("Dikkat", "İnternet bağlantınızı kontrol ediniz!", "Ok");
+                await DisplayAlert("Dikkat", "İnternet bağlantınızı kontrol ediniz!", "Ok");
             }
             else
             {
 
-                App.Database.SaveItemAsync(new TodoItem()
+                await App.Database.SaveItemAsync(new TodoItem()
                 {
                     ArticleDate = DateTime.Now,
                     Title = Title.Text,
                     Description = Detail.Text,
                     DocumentName = photoName,
-                    DocumentPath = photo.Path
+                    DocumentPath = photo.Path,
                 });
 
-                DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
+                await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
             }
         }
 
