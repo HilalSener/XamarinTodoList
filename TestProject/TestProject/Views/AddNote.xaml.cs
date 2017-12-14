@@ -84,6 +84,45 @@ namespace TestProject.Views
                 
         }
 
+        //public async Task<bool> ExecuteLoadItemsCommand(FieldVisitDto fieldVisitDto)
+        //{
+        //    UserDialogs.Instance.ShowLoading(AppResources.loading, MaskType.Gradient);
+        //    if (fieldVisitDto.FieldVisitDocument != null)
+        //    {
+        //        foreach (var document in fieldVisitDto.FieldVisitDocument)
+        //        {
+        //            if (document.DocumentTypeId == 1)
+        //            {
+        //                var imageService = DependencyService.Get<IImageService>();
+        //                var media = await document.DocumentPath.FileToByteArray();
+        //                var result = imageService.ResizeImage(media, 1200, 768);
+        //                document.Document = Convert.ToBase64String(result);
+
+        //            }
+        //            else
+        //            {
+        //                document.Document = await document.DocumentPath.FileToBase64();
+        //            }
+        //        }
+
+        //    }
+        //    var resultFields = await _UserFormService.SendFieldVisit(SetAndGetData(fieldVisitDto));
+        //    if (resultFields != null && resultFields.ResultCode == 0)
+        //    {
+        //        UserDialogs.Instance.HideLoading();
+        //        UserDialogs.Instance.ShowSuccess(AppResources.proccesSucces);
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        UserDialogs.Instance.HideLoading();
+        //        UserDialogs.Instance.ShowError(AppResources.errormsg);
+        //        return false;
+        //    }
+
+
+        //}
+
         private void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (!CrossConnectivity.Current.IsConnected)
@@ -92,12 +131,14 @@ namespace TestProject.Views
             }
             else
             {
-                
+
                 App.Database.SaveItemAsync(new TodoItem()
                 {
                     ArticleDate = DateTime.Now,
                     Title = Title.Text,
-                    Description = Detail.Text
+                    Description = Detail.Text,
+                    DocumentName = photoName,
+                    DocumentPath = photo.Path
                 });
 
                 DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
