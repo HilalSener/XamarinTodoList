@@ -81,7 +81,6 @@ C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Core.x
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Platform.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Xaml.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\Xamarin.Forms.Xaml.xml
-C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.MainPage.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.App.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.AddNote.xaml.g.cs
@@ -92,5 +91,8 @@ C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.Abstracti
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.Abstractions.xml
+C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.MediaDetailPage.xaml.g.cs
+C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll.mdb
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\TestProject.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\TestProject.dll.mdb

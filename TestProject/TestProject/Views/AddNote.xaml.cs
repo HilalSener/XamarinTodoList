@@ -12,6 +12,7 @@ using TestProject.DAL;
 using TestProject.Interfaces;
 using TestProject.Models;
 using TestProject.Utility;
+using TestProject.ViewsModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -21,10 +22,18 @@ namespace TestProject.Views
     public partial class AddNote : ContentPage
     {
         MediaFile photo = null;
-        public Photo photo1 { get; set; }
-        public Photo photo2 { get; set; }
-        public Photo photo3 { get; set; }
-        
+
+        public TodoItem TodoItems;
+
+        public MediaViewModel ViewModel
+        {
+            get { return BindingContext as MediaViewModel; }
+        }
+
+        //public Photo photo1 { get; set; }
+        //public Photo photo2 { get; set; }
+        //public Photo photo3 { get; set; }
+
         //public List<Photo> Photos = new List<Photo>();
 
         string photoName = DateTime.Now.Date.ToString("ddMMyyyymmhhMMss") + Guid.NewGuid().ToString().Replace("-", "").Substring(0, 4) + ".jpg";
@@ -32,8 +41,18 @@ namespace TestProject.Views
         public AddNote()
         {
             InitializeComponent();
+            //BindingContext = new MediaViewModel(todoItems);
+            //TodoItems = todoItems;
 
             CameraButton.Clicked += CameraButton_Clicked;
+        }
+
+        private void Delete_Photo_Tapped(object sender, EventArgs e)
+        {
+            Label label = (Label)sender;
+            var tapGestureRecognizer = (TapGestureRecognizer)label.GestureRecognizers.FirstOrDefault();
+
+            ViewModel.RemoveMedia((Photo)tapGestureRecognizer.CommandParameter);
         }
 
         int cnt = 1;
@@ -46,7 +65,7 @@ namespace TestProject.Views
 
             photo = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions()
             {
-                PhotoSize = PhotoSize.Small,
+                PhotoSize = PhotoSize.Custom,
                 CompressionQuality = 92,
                 CustomPhotoSize = 90,
                 AllowCropping = true,
@@ -55,22 +74,28 @@ namespace TestProject.Views
                 DefaultCamera = CameraDevice.Rear
             });
 
-            
-
             if (photo != null)
             {
-                //var imageService = DependencyService.Get<IImageService>();
-                //var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
-                //if (result.Length > 3145728)
-                //{ }
-                
                 if (cnt == 1)
                 {
                     AddPhotoStack1.IsVisible = false;
                     PhotoStack1.IsVisible = true;
-                    photo1.DocumentName = photoName;
-                    photo1.DocumentPath = photo.Path;
-                    photo1.Document = await DocumentEvent(photo1);
+
+                    var imageService = DependencyService.Get<IImageService>();
+                    var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
+                    if (result.Length > 3145728)
+                    {
+                        await DisplayAlert("UYARI", "En fazla 3mb dosya ekleyebilirsibniz.", "OK");
+                    }
+                    else
+                    {
+                        ViewModel.AddMedia(new Photo()
+                        {
+                            DocumentName = photoName,
+                            DocumentPath = photo.Path
+                        });
+                    }
+
                     Photo1.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
@@ -78,72 +103,34 @@ namespace TestProject.Views
                 {
                     AddPhotoStack2.IsVisible = false;
                     PhotoStack2.IsVisible = true;
-                    photo2.DocumentName = photoName;
-                    photo2.DocumentPath = photo.Path;
-                    Photo2.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+                    ViewModel.AddMedia(new Photo()
+                    {
+                        DocumentName = photoName,
+                        DocumentPath = photo.Path
+                    });
+
+                    //Photo2.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
                 else if (cnt == 3)
                 {
                     AddPhotoStack3.IsVisible = false;
                     PhotoStack3.IsVisible = true;
-                    photo3.DocumentName = photoName;
-                    photo3.DocumentPath = photo.Path;
-                    Photo3.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
+                    ViewModel.AddMedia(new Photo()
+                    {
+                        DocumentName = photoName,
+                        DocumentPath = photo.Path
+                    });
+
+                    //Photo3.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
+
+                photo.Dispose();
             }
-            //photo.Dispose();
-                
+            
         }
-
-        //public async Task<bool> ExecuteLoadItemsCommand(FieldVisitDto fieldVisitDto)
-        //{
-        //    UserDialogs.Instance.ShowLoading(AppResources.loading, MaskType.Gradient);
-        //    if (fieldVisitDto.FieldVisitDocument != null)
-        //    {
-        //        foreach (var document in fieldVisitDto.FieldVisitDocument)
-        //        {
-        //            if (document.DocumentTypeId == 1)
-        //            {
-        //                var imageService = DependencyService.Get<IImageService>();
-        //                var media = await document.DocumentPath.FileToByteArray();
-        //                var result = imageService.ResizeImage(media, 1200, 768);
-        //                document.Document = Convert.ToBase64String(result);
-
-        //            }
-        //            else
-        //            {
-        //                document.Document = await document.DocumentPath.FileToBase64();
-        //            }
-        //        }
-
-        //    }
-        //    var resultFields = await _UserFormService.SendFieldVisit(SetAndGetData(fieldVisitDto));
-        //    if (resultFields != null && resultFields.ResultCode == 0)
-        //    {
-        //        UserDialogs.Instance.HideLoading();
-        //        UserDialogs.Instance.ShowSuccess(AppResources.proccesSucces);
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        UserDialogs.Instance.HideLoading();
-        //        UserDialogs.Instance.ShowError(AppResources.errormsg);
-        //        return false;
-        //    }
-
-
-        //}
-
-        public async Task<String> DocumentEvent(Photo photo)
-        {
-            var imageService = DependencyService.Get<IImageService>();
-            var media = await photo.DocumentPath.FileToByteArray();
-            var result = imageService.ResizeImage(media, 1200, 768);
-            return photo.Document = Convert.ToBase64String(result);
-        }
-
+        
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (!CrossConnectivity.Current.IsConnected)
@@ -152,14 +139,12 @@ namespace TestProject.Views
             }
             else
             {
-
+                bool success = await ViewModel.ExecuteLoadItemsCommand(TodoItems);
                 await App.Database.SaveItemAsync(new TodoItem()
                 {
                     ArticleDate = DateTime.Now,
                     Title = Title.Text,
                     Description = Detail.Text,
-                    DocumentName = photoName,
-                    DocumentPath = photo.Path,
                 });
 
                 await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
@@ -187,6 +172,12 @@ namespace TestProject.Views
                 {
                     AddPhotoStack1.IsVisible = false;
                     PhotoStack1.IsVisible = true;
+                    ViewModel.AddMedia(new Photo()
+                    {
+                        DocumentName = photoName,
+                        DocumentPath = photo.Path
+                    });
+
                     Photo1.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
@@ -194,6 +185,12 @@ namespace TestProject.Views
                 {
                     AddPhotoStack2.IsVisible = false;
                     PhotoStack2.IsVisible = true;
+                    ViewModel.AddMedia(new Photo()
+                    {
+                        DocumentName = photoName,
+                        DocumentPath = photo.Path
+                    });
+
                     Photo2.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
@@ -201,38 +198,25 @@ namespace TestProject.Views
                 {
                     AddPhotoStack3.IsVisible = false;
                     PhotoStack3.IsVisible = true;
+                    ViewModel.AddMedia(new Photo()
+                    {
+                        DocumentName = photoName,
+                        DocumentPath = photo.Path
+                    });
+
                     Photo3.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
-            }
-        }
 
-        private void SaveMedia()
-        {
-            if (photo != null)
-            {
-                var imageService = DependencyService.Get<IImageService>();
-                var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
-                if (result.Length > 3145728)
-                {
-                    DisplayAlert("Bilgi", "En fazla 3mb dosya ekleyebilirsiniz.", "Tamam");
-                }
-                else
-                {
-                    
-                }
                 photo.Dispose();
             }
-            else
-            {
-                return;
-            }
+
         }
 
-        private void Delete_Photo_Tapped(object sender, EventArgs e)
+        private async void Detail_Photo_Tapped(object sender, TappedEventArgs e)
         {
-            
-            //TODO:
+            var document = (Photo)e.Parameter;
+            await Navigation.PushAsync(new MediaDetailPage(document));
         }
     }
 }

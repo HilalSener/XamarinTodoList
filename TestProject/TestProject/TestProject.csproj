@@ -51,8 +51,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\Extension.cs" />
     <Compile Include="ViewsModel\MainViewModel.cs" />
+    <Compile Include="ViewsModel\MediaViewModel.cs" />
     <Compile Include="Views\AddNote.xaml.cs">
       <DependentUpon>AddNote.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MediaDetailPage.xaml.cs">
+      <DependentUpon>MediaDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Notes.xaml.cs">
       <DependentUpon>Notes.xaml</DependentUpon>
@@ -130,7 +134,12 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Views\MediaDetailPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\AddNote.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
