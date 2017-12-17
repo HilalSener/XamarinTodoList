@@ -1,4 +1,5 @@
-﻿using Plugin.Connectivity;
+﻿using Android.Util;
+using Plugin.Connectivity;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using SkiaSharp;
@@ -25,16 +26,13 @@ namespace TestProject.Views
 
         public TodoItem TodoItems;
 
+        public static List<Photo> Photos = new List<Photo>();
+
         public MediaViewModel ViewModel
         {
             get { return BindingContext as MediaViewModel; }
         }
 
-        //public Photo photo1 { get; set; }
-        //public Photo photo2 { get; set; }
-        //public Photo photo3 { get; set; }
-
-        //public List<Photo> Photos = new List<Photo>();
 
         string photoName = DateTime.Now.Date.ToString("ddMMyyyymmhhMMss") + Guid.NewGuid().ToString().Replace("-", "").Substring(0, 4) + ".jpg";
 
@@ -89,7 +87,7 @@ namespace TestProject.Views
                     }
                     else
                     {
-                        ViewModel.AddMedia(new Photo()
+                        Photos.Add(new Photo()
                         {
                             DocumentName = photoName,
                             DocumentPath = photo.Path
@@ -103,11 +101,27 @@ namespace TestProject.Views
                 {
                     AddPhotoStack2.IsVisible = false;
                     PhotoStack2.IsVisible = true;
-                    ViewModel.AddMedia(new Photo()
+
+                    var imageService = DependencyService.Get<IImageService>();
+                    var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
+                    if (result.Length > 3145728)
                     {
-                        DocumentName = photoName,
-                        DocumentPath = photo.Path
-                    });
+                        await DisplayAlert("UYARI", "En fazla 3mb dosya ekleyebilirsibniz.", "OK");
+                    }
+                    else
+                    {
+                        Photos.Add(new Photo()
+                        {
+                            DocumentName = photoName,
+                            DocumentPath = photo.Path
+                        });
+                    }
+
+                    //ViewModel.AddMedia(new Photo()
+                    //{
+                    //    DocumentName = photoName,
+                    //    DocumentPath = photo.Path
+                    //});
 
                     //Photo2.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
@@ -116,21 +130,44 @@ namespace TestProject.Views
                 {
                     AddPhotoStack3.IsVisible = false;
                     PhotoStack3.IsVisible = true;
-                    ViewModel.AddMedia(new Photo()
+
+                    var imageService = DependencyService.Get<IImageService>();
+                    var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
+                    if (result.Length > 3145728)
                     {
-                        DocumentName = photoName,
-                        DocumentPath = photo.Path
-                    });
+                        await DisplayAlert("UYARI", "En fazla 3mb dosya ekleyebilirsibniz.", "OK");
+                    }
+                    else
+                    {
+                        Photos.Add(new Photo()
+                        {
+                            DocumentName = photoName,
+                            DocumentPath = photo.Path
+                        });
+                    }
+
+                    //ViewModel.AddMedia(new Photo()
+                    //{
+                    //    DocumentName = photoName,
+                    //    DocumentPath = photo.Path
+                    //});
 
                     //Photo3.Source = ImageSource.FromStream(() => { return photo.GetStream(); });
                     cnt++;
                 }
+                
+                foreach (var photo in Photos)
+                {
+                    Log.Error("Fotoğraf eklendi!", photo.DocumentPath);
+
+                    //System.Diagnostics.Debug.WriteLine("Fotoğraf eklendi!", photo);
+                }
 
                 photo.Dispose();
             }
-            
+
         }
-        
+
         private async void SaveBtn_Clicked(object sender, EventArgs e)
         {
             if (!CrossConnectivity.Current.IsConnected)
@@ -139,12 +176,12 @@ namespace TestProject.Views
             }
             else
             {
-                bool success = await ViewModel.ExecuteLoadItemsCommand(TodoItems);
+                //bool success = await ViewModel.ExecuteLoadItemsCommand(TodoItems);
                 await App.Database.SaveItemAsync(new TodoItem()
                 {
                     ArticleDate = DateTime.Now,
                     Title = Title.Text,
-                    Description = Detail.Text,
+                    Description = Detail.Text
                 });
 
                 await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");

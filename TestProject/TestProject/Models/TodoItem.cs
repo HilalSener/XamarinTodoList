@@ -18,18 +18,11 @@ namespace TestProject.DAL
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime ArticleDate { get; set; }
-        public List<Photo> Photos { get; set; }
+        public String DocumentName { get; set; }
+        public string DocumentPath { get; set; }
+        public String Document { get; set; }
+        public static List<Photo> Photos { get; set; }
 
-        //public Photo photo1 { get; set; }
-        //public Photo photo2 { get; set; }
-        //public Photo photo3 { get; set; }
-
-        //public class Photo
-        //{
-        //    public String DocumentName { get; set; }
-        //    public string DocumentPath { get; set; }
-        //    public String Document { get; set; }
-        //}
         //public Media media { get; set; }
 
         //public class Media

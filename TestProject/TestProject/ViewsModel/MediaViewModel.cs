@@ -16,11 +16,11 @@ namespace TestProject.ViewsModel
 {
     public class MediaViewModel
     {
-        private TodoItem Items;
+        private Photo Photos;
 
-        public MediaViewModel(TodoItem photo)
+        public MediaViewModel(Photo photo)
         {
-            Items = photo;
+            Photos = photo;
             BindingData();
         }
 
@@ -34,37 +34,37 @@ namespace TestProject.ViewsModel
 
         public void BindingData()
         {
-            MediaModel = new ObservableCollection<Photo>(Items.Photos);
+            MediaModel = new ObservableCollection<Photo>();
         }
 
         public void AddMedia(Photo media)
         {
+            //Items.Photos.Add(media);
             MediaModel.Add(media);
-            Items.Photos.Add(media);
         }
 
         public void RemoveMedia(Photo media)
         {
             MediaModel.Remove(media);
-            Items.Photos.Remove(media);
+            //Items.Photos.Remove(media);
         }
 
-        public async Task<bool> ExecuteLoadItemsCommand(TodoItem todoItems)
-        {
-            if (todoItems.Photos != null)
-            {
-                foreach (var document in todoItems.Photos)
-                {
-                    var imageService = DependencyService.Get<IImageService>();
-                    var media = await document.DocumentPath.FileToByteArray();
-                    var result = imageService.ResizeImage(media, 1200, 768);
-                    document.Document = Convert.ToBase64String(result);
-                }
-                return true;
-            }
-            else
-                return false;
-        }
+        //public async Task<bool> ExecuteLoadItemsCommand(Photo todoItems)
+        //{
+        //    if (todoItems. != null)
+        //    {
+        //        foreach (var document in todoItems.Photos)
+        //        {
+        //            var imageService = DependencyService.Get<IImageService>();
+        //            var media = await document.DocumentPath.FileToByteArray();
+        //            var result = imageService.ResizeImage(media, 1200, 768);
+        //            document.Document = Convert.ToBase64String(result);
+        //        }
+        //        return true;
+        //    }
+        //    else
+        //        return false;
+        //}
 
         public event PropertyChangedEventHandler PropertyChanged;
 
