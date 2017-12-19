@@ -92,6 +92,7 @@ C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\PCLStorage.Abstractions.xml
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.MediaDetailPage.xaml.g.cs
+C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.NotesDetailPage.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.csprojResolveAssemblyReference.cache
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\TestProject.dll.mdb

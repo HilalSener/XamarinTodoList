@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SQLite;
+using TestProject.Models;
 
 namespace TestProject.DAL
 {
@@ -14,11 +15,21 @@ namespace TestProject.DAL
         public ItemsDb(string dbPath)
         {
             database = new SQLiteAsyncConnection(dbPath);
+
             database.CreateTableAsync<TodoItem>().Wait();
+            database.CreateTableAsync<Photo>().Wait();
         }
-        public Task<List<TodoItem>> GetItemsAsync()
+
+        public List<ItemWithPhotos> GetItemsAsync()
         {
-            return database.Table<TodoItem>().ToListAsync();
+            var items = database.QueryAsync<ItemWithPhotos>("Select * from [TodoItem]").Result;
+
+            foreach (var item in items)
+            {
+                item.Photos = database.QueryAsync<Photo>("Select * from [Photo] where ItemId=" + item.Id).Result;
+            }
+
+            return items;
         }
 
         public Task<List<TodoItem>> GetItemsNotDoneAsync()
@@ -26,9 +37,22 @@ namespace TestProject.DAL
             return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
         }
 
-        public Task<TodoItem> GetItemAsync(int id)
+        public Task<Photo> GetItemAsync(int id)
         {
-            return database.Table<TodoItem>().Where(i => i.Id == id).FirstOrDefaultAsync();
+            return database.Table<Photo>().Where(i => i.Id == id).FirstOrDefaultAsync();
+        }
+
+        public Task<List<TodoItem>> GetItemsWithPhotosAsync(List<Photo> photos)
+        {
+            if (photos != null && photos.Count > 0)
+            {
+                return database.QueryAsync<TodoItem>($"SELECT * FROM [TodoItem] INNER JOIN [Photo] ON [TodoItem.Id] = [Photo.ItemId]");
+            }
+            else
+            {
+                return null;
+            }
+
         }
 
         public Task<int> SaveItemAsync(TodoItem item)
@@ -43,9 +67,19 @@ namespace TestProject.DAL
             }
         }
 
+        public Task<int> SavePhotosAsync(List<Photo> photos)
+        {
+            return database.InsertAllAsync(photos);
+        }
+
         public Task<int> DeleteItemAsync(TodoItem item)
         {
             return database.DeleteAsync(item);
+        }
+
+        public Task<int> DeletePhotoAsync(Photo photo)
+        {
+            return database.DeleteAsync(photo);
         }
     }
 }

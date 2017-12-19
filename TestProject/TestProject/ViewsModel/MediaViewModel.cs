@@ -49,23 +49,6 @@ namespace TestProject.ViewsModel
             //Items.Photos.Remove(media);
         }
 
-        //public async Task<bool> ExecuteLoadItemsCommand(Photo todoItems)
-        //{
-        //    if (todoItems. != null)
-        //    {
-        //        foreach (var document in todoItems.Photos)
-        //        {
-        //            var imageService = DependencyService.Get<IImageService>();
-        //            var media = await document.DocumentPath.FileToByteArray();
-        //            var result = imageService.ResizeImage(media, 1200, 768);
-        //            document.Document = Convert.ToBase64String(result);
-        //        }
-        //        return true;
-        //    }
-        //    else
-        //        return false;
-        //}
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         public void OnPropertyChanged([CallerMemberName] string propertyName = "")

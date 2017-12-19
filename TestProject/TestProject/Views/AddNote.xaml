@@ -46,7 +46,7 @@
                                  HeightRequest="100" 
                                  WidthRequest="100">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped1"
                                                   NumberOfTapsRequired="1" />
                         </StackLayout.GestureRecognizers>
                         <Image Source="camera.png" 
@@ -66,7 +66,7 @@
                             <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
                                 <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
                                 <AbsoluteLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped1"
                                                           NumberOfTapsRequired="1" 
                                                           CommandParameter="{Binding .}"/>
                                 </AbsoluteLayout.GestureRecognizers>
@@ -78,7 +78,7 @@
                                  HeightRequest="100"
                                  WidthRequest="100">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped2"
                                                   NumberOfTapsRequired="1" />
                         </StackLayout.GestureRecognizers>
                         <Image Source="camera.png" 
@@ -98,7 +98,7 @@
                             <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
                                 <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
                                 <AbsoluteLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped2"
                                                           NumberOfTapsRequired="1" 
                                                           CommandParameter="{Binding .}" />
                                 </AbsoluteLayout.GestureRecognizers>
@@ -110,7 +110,7 @@
                                  HeightRequest="100"
                                  WidthRequest="100">
                         <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="Add_Photo_Tapped"
+                            <TapGestureRecognizer Tapped="Add_Photo_Tapped3"
                                                   NumberOfTapsRequired="1" />
                         </StackLayout.GestureRecognizers>
                         <Image Source="camera.png"
@@ -130,7 +130,7 @@
                             <AbsoluteLayout AbsoluteLayout.LayoutBounds="70,5,25,25">
                                 <Image Source="delete.png" WidthRequest="25" HeightRequest="25" />
                                 <AbsoluteLayout.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped"
+                                    <TapGestureRecognizer Tapped="Delete_Photo_Tapped3"
                                                           NumberOfTapsRequired="1"
                                                           CommandParameter="{Binding .}" />
                                 </AbsoluteLayout.GestureRecognizers>

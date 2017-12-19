@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TestProject.DAL;
+using TestProject.Models;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,10 +18,10 @@ namespace TestProject.Views
             InitializeComponent();
         }
 
-        protected override async void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
-            listView.ItemsSource = await App.Database.GetItemsAsync();
+            listView.ItemsSource = App.Database.GetItemsAsync();
         }
     }
 }
