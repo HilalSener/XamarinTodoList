@@ -43,6 +43,7 @@
     <Compile Include="Interfaces\IImageService.cs" />
     <Compile Include="Models\ItemWithPhotos.cs" />
     <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\Services.cs" />
     <Compile Include="Models\TodoItem.cs" />
     <Compile Include="Helpers\StorageHelper.cs" />
     <Compile Include="Interfaces\IFileHelper.cs" />

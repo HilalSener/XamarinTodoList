@@ -320,6 +320,9 @@ namespace TestProject.Views
 
                 var result = await App.Database.SavePhotosAsync(Photos);
 
+                var addService = new Services();
+                addService.Images = itemPhotos.Photos.Select(x=>x.DocumentPath).ToList();
+
                 await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
             }
         }

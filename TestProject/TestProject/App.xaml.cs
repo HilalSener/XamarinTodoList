@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TestProject.DAL;
 using TestProject.Interfaces;
+using TestProject.Models;
 using Xamarin.Forms;
 
 namespace TestProject
@@ -11,6 +12,8 @@ namespace TestProject
     public partial class App : Application
     {
         static ItemsDb database;
+
+        public static Services Service;
         public static ItemsDb Database
         {
             get

@@ -69,6 +69,7 @@ namespace TestProject.DAL
 
         public Task<int> SavePhotosAsync(List<Photo> photos)
         {
+            //TODO: internet varsa servise kaydet
             return database.InsertAllAsync(photos);
         }
 
