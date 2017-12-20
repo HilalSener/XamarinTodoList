@@ -235,46 +235,21 @@ namespace TestProject.Views
 
         }
 
-        private async void SaveBtn_Clicked(object sender, EventArgs e)
+        private async void PhotoFromGallery_Clicked(object sender, EventArgs e)
         {
-            if (!CrossConnectivity.Current.IsConnected)
+            Camera_View.IsVisible = false;
+            PhotoImage.IsVisible = true;
+            Slide.IsVisible = true;
+            PhotoImage.IsVisible = false;
+
+            photo = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions()
             {
-                await DisplayAlert("Dikkat", "İnternet bağlantınızı kontrol ediniz!", "Ok");
-            }
-            else
-            {
-                var resultItemId = await App.Database.SaveItemAsync(new TodoItem()
-                {
-                    ArticleDate = DateTime.Now,
-                    Title = Title.Text,
-                    Description = Detail.Text
-                });
+                PhotoSize = PhotoSize.Small,
+                CompressionQuality = 92,
+                CustomPhotoSize = 90,
+            });
 
-                foreach (var item in Photos)
-                {
-                    item.ItemId = resultItemId;
-                }
-
-                var result = await App.Database.SavePhotosAsync(Photos);
-
-                await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
-            }
-        }
-
-        //private void Add_Photo_Tapped(object sender, EventArgs e)
-        //{
-        //    Slide.IsVisible = false;
-        //    Camera_View.IsVisible = true;
-        //}
-
-        private void PhotoFromGallery_Clicked(object sender, EventArgs e)
-        {
-            //photo = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions()
-            //{
-            //    PhotoSize = PhotoSize.Small,
-            //    CompressionQuality = 92,
-            //    CustomPhotoSize = 90,
-            //});
+            await AddPhoto(LastSelectedType);
 
             //if (photo != null)
             //{
@@ -322,6 +297,40 @@ namespace TestProject.Views
             //}
 
         }
+
+        private async void SaveBtn_Clicked(object sender, EventArgs e)
+        {
+            if (!CrossConnectivity.Current.IsConnected)
+            {
+                await DisplayAlert("Dikkat", "İnternet bağlantınızı kontrol ediniz!", "Ok");
+            }
+            else
+            {
+                var resultItemId = await App.Database.SaveItemAsync(new TodoItem()
+                {
+                    ArticleDate = DateTime.Now,
+                    Title = Title.Text,
+                    Description = Detail.Text
+                });
+
+                foreach (var item in Photos)
+                {
+                    item.ItemId = resultItemId;
+                }
+
+                var result = await App.Database.SavePhotosAsync(Photos);
+
+                await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
+            }
+        }
+
+        //private void Add_Photo_Tapped(object sender, EventArgs e)
+        //{
+        //    Slide.IsVisible = false;
+        //    Camera_View.IsVisible = true;
+        //}
+
+       
 
         private void Detail_Photo_Tapped(object sender, TappedEventArgs e)
         {
