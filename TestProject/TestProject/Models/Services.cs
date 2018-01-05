@@ -10,11 +10,11 @@ namespace TestProject.Models
     {
         public Services()
         {
-            Images = Images ?? new List<string>();
+            Images = Images ?? new List<byte[]>();
         }
         public string Descripition { get; set; }
         public int SectionId { get; set; }
         public int TroubleCategoryId { get; set; }
-        public List<string> Images { get; set; }
+        public List<byte[]> Images { get; set; }
     }
 }

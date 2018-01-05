@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Devices>
-  <Device id="F6AZFG153166">
+  <Device id="G3AZFG029712R26">
     <ResultingAbi>x86</ResultingAbi>
-    <SdkVersion>21</SdkVersion>
+    <SdkVersion>23</SdkVersion>
   </Device>
 </Devices>

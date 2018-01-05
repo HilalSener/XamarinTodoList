@@ -63,7 +63,19 @@ namespace TestProject.DAL
             }
             else
             {
-                return database.InsertAsync(item);
+                try
+                {
+                    database.InsertAsync(item);
+                    var data = database.QueryAsync<TodoItem>($"SELECT Id FROM [TodoItem] ORDER BY Id DESC LIMIT 1");
+                    var x = data.Result.FirstOrDefault().Id;
+                    return Task.FromResult(x);
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
+                }
+
             }
         }
 

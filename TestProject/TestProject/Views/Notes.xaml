@@ -4,11 +4,37 @@
              x:Class="TestProject.Views.Notes">
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView"  Margin="10" ItemsSource="{Binding .}">
+            <ListView x:Name="listView"  Margin="10" ItemsSource="{Binding PhotoList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Margin="5">
+                            <Image Source="{Binding DocumentStr}"
+                                   HeightRequest="100"
+                                   WidthRequest="100" />
+                        </ViewCell>
+
+                        <!--<StackLayout Orientation="Horizontal">
+                            <Image x:Name="NotePhoto"
+                                       HeightRequest="100" 
+                                       WidthRequest="100"/>
+                            <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Title}"
+                                           VerticalOptions="CenterAndExpand" 
+                                           HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding ArticleDate}" 
+                                           VerticalOptions="CenterAndExpand" 
+                                           HorizontalOptions="EndAndExpand" />
+                                </StackLayout>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Description}" 
+                                           VerticalOptions="FillAndExpand" 
+                                           HorizontalOptions="FillAndExpand" />
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>-->
+
+                        <!--<Grid Margin="5">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition/>
@@ -44,25 +70,7 @@
                                            VerticalOptions="FillAndExpand" 
                                            HorizontalOptions="FillAndExpand" />
                                 </StackLayout>
-                            </Grid>
-                            
-                            <!--<StackLayout Orientation="Vertical">
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Title}"
-                                           VerticalOptions="CenterAndExpand" 
-                                           HorizontalOptions="StartAndExpand" />
-                                    <Label Text="{Binding ArticleDate}" 
-                                           VerticalOptions="CenterAndExpand" 
-                                           HorizontalOptions="EndAndExpand" />
-                                </StackLayout>
-                                <StackLayout Orientation="Vertical">
-                                    <Label Text="{Binding Description}" 
-                                           VerticalOptions="FillAndExpand" 
-                                           HorizontalOptions="FillAndExpand" />
-                                </StackLayout>
-                            </StackLayout>-->
-                            
-                        </ViewCell>
+                            </Grid>-->
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>

@@ -100,6 +100,7 @@ namespace TestProject.Views
                     {
                         DocumentName = photoName,
                         DocumentPath = photo.Path,
+                        Document = await photo.Path.FileToByteArray(),
                         SortingId = type
                     });
                 }
@@ -320,8 +321,8 @@ namespace TestProject.Views
 
                 var result = await App.Database.SavePhotosAsync(Photos);
 
-                var addService = new Services();
-                addService.Images = itemPhotos.Photos.Select(x=>x.DocumentPath).ToList();
+                //var addService = new Services();
+                //addService.Images = itemPhotos.Photos.Select(x=>x.Document).ToList();
 
                 await DisplayAlert("Başarılı", "Notunuz kayıt edildi.", "Ok");
             }

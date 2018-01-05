@@ -48,5 +48,7 @@ namespace TestProject.Utility
                 return stream.ReadFully();
             }
         }
+
+
     }
 }

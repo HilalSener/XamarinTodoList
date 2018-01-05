@@ -22,10 +22,5 @@ namespace TestProject.Models
         public string Description { get; set; }
         public DateTime ArticleDate { get; set; }
         public List<Photo> Photos { get; set; }
-
-        //public string Descripition { get; set; }
-        //public int SectionId { get; set; }
-        //public int TroubleCategoryId { get; set; }
-        //public string Images { get; set; }
     }
 }

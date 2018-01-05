@@ -115,6 +115,8 @@ C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\com.companyn
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\com.companyname.TestProject-Signed.apk
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\FormsViewGroup.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Newtonsoft.Json.dll
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.Abstractions.dll
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.Connectivity.Abstractions.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.Connectivity.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.CurrentActivity.dll
@@ -158,6 +160,8 @@ C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\TestProject.
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\FormsViewGroup.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\FormsViewGroup.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Newtonsoft.Json.xml
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.xml
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.Abstractions.xml
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.Connectivity.pdb
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.Connectivity.xml
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Plugin.Connectivity.dll.mdb
@@ -203,13 +207,9 @@ C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable\red_circle.png
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable\piper.jpg
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable\camera.png
+C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable\delete.png
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\R.cs.flag
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\uploadflags.txt
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\res\drawable\delete.png
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.Abstractions.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.xml
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\PCLStorage.Abstractions.xml
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\TestProject.Android.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\TestProject.dll.mdb
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\bin\Debug\Java.Interop.dll.mdb
