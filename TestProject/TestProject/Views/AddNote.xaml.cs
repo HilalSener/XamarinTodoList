@@ -2,8 +2,6 @@
 using Plugin.Connectivity;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
-using SkiaSharp;
-using SkiaSharp.Views.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,14 +86,14 @@ namespace TestProject.Views
                         break;
                 }
 
-                var imageService = DependencyService.Get<IImageService>();
-                var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
-                if (result.Length > 3145728)
-                {
-                    await DisplayAlert("UYARI", "En fazla 3mb dosya ekleyebilirsibniz.", "OK");
-                }
-                else
-                {
+                //var imageService = DependencyService.Get<IImageService>();
+                //var result = imageService.ResizeImage(photo.GetStream().ReadFully(), 1200, 768);
+                //if (result.Length > 3145728)
+                //{
+                //    await DisplayAlert("UYARI", "En fazla 3mb dosya ekleyebilirsibniz.", "OK");
+                //}
+                //else
+                //{
                     Photos.Add(new Photo()
                     {
                         DocumentName = photoName,
@@ -103,7 +101,7 @@ namespace TestProject.Views
                         Document = await photo.Path.FileToByteArray(),
                         SortingId = type
                     });
-                }
+                //}
 
                 switch (type)
                 {

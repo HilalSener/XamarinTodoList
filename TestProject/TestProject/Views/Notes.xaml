@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TestProject.Utility;assembly=TestProject"
              x:Class="TestProject.Views.Notes">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:ByteArrayToImageSourceConverter x:Key="ByteArrayToImage" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="listView"  Margin="10" ItemsSource="{Binding PhotoList}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Image Source="{Binding DocumentStr}"
+                            <Image Source="{Binding Photo.Document, Converter={StaticResource ByteArrayToImage}}"
                                    HeightRequest="100"
                                    WidthRequest="100" />
                         </ViewCell>

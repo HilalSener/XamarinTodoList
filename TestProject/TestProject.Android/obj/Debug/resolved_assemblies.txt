@@ -10,9 +10,6 @@ C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\asse
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.Media.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.Permissions.Abstractions.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\Plugin.Permissions.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SkiaSharp.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SkiaSharp.Views.Android.dll
-C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SkiaSharp.Views.Forms.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SQLite-net.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SQLitePCL.dll
 C:\Github\XamarinTodoList\TestProject\TestProject.Android\obj\Debug\android\assets\SQLitePCL.Ext.dll

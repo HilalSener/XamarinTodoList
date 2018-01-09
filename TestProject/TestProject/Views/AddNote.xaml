@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
-             x:Class="TestProject.Views.AddNote">
+             x:Class="TestProject.Views.AddNote"
+             xmlns:imgExtensions="clr-namespace:TestProject.Views;assembly=TestProject">
 
     <ContentPage.Content>
         <ScrollView>
             <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                 <Image x:Name="Slide" 
-                       Source="piper.jpg" 
+                       Source="{imgExtensions:PlatformImage SourceImage='piper.jpg'}" 
                        HeightRequest="300" 
                        VerticalOptions="FillAndExpand"
                        HorizontalOptions="FillAndExpand"
@@ -49,7 +49,7 @@
                             <TapGestureRecognizer Tapped="Add_Photo_Tapped1"
                                                   NumberOfTapsRequired="1" />
                         </StackLayout.GestureRecognizers>
-                        <Image Source="camera.png" 
+                        <Image Source="{imgExtensions:PlatformImage SourceImage='camera.png'}"  
                                VerticalOptions="CenterAndExpand" 
                                HorizontalOptions="CenterAndExpand"
                                Margin="30"/>
@@ -57,7 +57,11 @@
                     <StackLayout x:Name="PhotoStack1"
                                  IsVisible="False">
                         <AbsoluteLayout>
-                            <Image x:Name="Photo1" Source="{Binding photo1.DocumentPath}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                            <Image x:Name="Photo1" 
+                                   Source="{Binding DocumentPath}" 
+                                   Aspect="AspectFill" 
+                                   HeightRequest="100" 
+                                   WidthRequest="100"/>
                             <AbsoluteLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Detail_Photo_Tapped"
                                                           NumberOfTapsRequired="1" 
@@ -89,7 +93,11 @@
                     <StackLayout x:Name="PhotoStack2"
                                  IsVisible="False">
                         <AbsoluteLayout>
-                            <Image x:Name="Photo2" Source="{Binding DocumentPath}" Aspect="AspectFill" HeightRequest="100" WidthRequest="100"/>
+                            <Image x:Name="Photo2" 
+                                   Source="{Binding DocumentPath}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="100"
+                                   WidthRequest="100"/>
                             <AbsoluteLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Detail_Photo_Tapped"
                                                           NumberOfTapsRequired="1" 

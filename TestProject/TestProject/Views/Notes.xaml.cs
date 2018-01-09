@@ -32,7 +32,7 @@ namespace TestProject.Views
             {
                 foreach (var photo in item.Photos)
                 {
-                    photo.DocumentStr = new MemoryStream(photo.Document);
+                    //photo.DocumentStr = new MemoryStream(photo.Document);
                     PhotoList.Add(photo);
                 }
             }

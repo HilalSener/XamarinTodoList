@@ -1,0 +1,2 @@
+C:\Github\XamarinTodoList\TestProject\TestProject.UWP\TestProject.UWP.csproj;x86
+C:\Github\XamarinTodoList\TestProject\TestProject\TestProject.csproj;neutral

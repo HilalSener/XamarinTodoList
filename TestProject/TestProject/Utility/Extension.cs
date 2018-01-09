@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Forms;
 
 namespace TestProject.Utility
 {
@@ -49,6 +50,16 @@ namespace TestProject.Utility
             }
         }
 
+        public static ImageSource AsImageSource(this byte[] byteArray)
+        {
+            ImageSource retSource = null;
+            if (byteArray != null)
+            {
+                byte[] imageAsBytes = byteArray;
+                retSource = ImageSource.FromStream(() => new MemoryStream(imageAsBytes));
+            }
+            return retSource;
+        }
 
     }
 }
