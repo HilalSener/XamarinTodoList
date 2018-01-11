@@ -110,6 +110,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\camera.png" />
+    <Content Include="Assets\delete.png" />
     <Content Include="Assets\green_circle.png" />
     <Content Include="Assets\piper.jpg" />
     <Content Include="Assets\red_circle.png" />

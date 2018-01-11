@@ -45,3 +45,5 @@ C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.No
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.Views.NotesDetailPage.xaml.g.cs
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll
 C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.pdb
+C:\Github\XamarinTodoList\TestProject\TestProject\obj\Debug\TestProject.dll.mdb
+C:\Github\XamarinTodoList\TestProject\TestProject\bin\Debug\TestProject.dll.mdb

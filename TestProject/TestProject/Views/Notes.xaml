@@ -10,13 +10,13 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="listView"  Margin="10" ItemsSource="{Binding PhotoList}">
+            <ListView x:Name="listView"  Margin="10">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Image Source="{Binding Photo.Document, Converter={StaticResource ByteArrayToImage}}"
-                                   HeightRequest="100"
-                                   WidthRequest="100" />
+                            <Image Source="{Binding DocumentImageSource}"
+                                   HeightRequest="200"
+                                   HorizontalOptions="FillAndExpand" />
                         </ViewCell>
 
                         <!--<StackLayout Orientation="Horizontal">

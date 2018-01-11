@@ -16,14 +16,14 @@ namespace TestProject.Models
         public int Id { get; set; }
         public String DocumentName { get; set; }
         public String DocumentPath { get; set; }
-        //private String _documentStr { get; set; }
-        //public String DocumentStr
-        //{
-        //    get { return _documentStr; }
-        //    set => Extension.AsImageSource(Document);
-        //}
         public byte[] Document { get; set; }
         public int ItemId { get; set; }
         public int SortingId { get; set; }
+
+        [Ignore]
+        public ImageSource DocumentImageSource
+        {
+            get { return ImageSource.FromStream(() => { return new MemoryStream(Document); }); }
+        }
     }
 }

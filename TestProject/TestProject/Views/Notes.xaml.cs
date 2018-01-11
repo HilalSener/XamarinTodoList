@@ -19,6 +19,7 @@ namespace TestProject.Views
         public Notes()
         {
             InitializeComponent();
+            
         }
 
         protected override void OnAppearing()
@@ -36,6 +37,7 @@ namespace TestProject.Views
                     PhotoList.Add(photo);
                 }
             }
+            listView.ItemsSource = PhotoList;
         }
     }
 }
